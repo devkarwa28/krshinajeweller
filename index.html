@@ -8,9 +8,10 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- font aewsome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="js/owl.carousel.js"></script>
-    <link rel="" href="scss/owl.carousel.css">
+   <script src="owl.carousel.js"></script>
+   <script src="jquery-3.6.0.js"></script>
+   <script src="jquery.min.js"></script>
+   <link rel="stylesheet" href="owl.carousel.min.css">
 
     <title>Krishna Jewellers</title>
 </head>
@@ -233,7 +234,7 @@
     </section>
     <section class="section-7">
         <div class="sec7-1">
-            <div class="sec7-1-1">
+            <!-- <div class="sec7-1-1">
                 <h1>Bank Account Detail</h1>
             <ul>
                 <li><b>Bank Name :</b>Axis Bank , Bilara</li>
@@ -243,7 +244,18 @@
                 <li><b>GST No :</b>0000000000</li>
                 <li><b>PAN No :</b>0000000000</li>
             </ul>
-            </div> 
+            </div>  -->
+            <div class="owl-carousel">
+                <div class="item">
+        
+                </div>
+                <div class="item">
+                  
+                </div>
+                <div class="item">
+            
+        </div>
+            </div>
         </div>
         <div class="sec7-2">
             <div class="barcode1">
@@ -360,6 +372,26 @@
 
         </div>
     </section>
-     
+    <script>
+        $(document).ready(function () {
+                  var owl = $('.owl-carousel');
+                  owl.owlCarousel({
+                    items: 1,
+                    loop: true,
+                    margin: 10,
+                    autoplay: true,
+                    autoplayTimeout: 1000,
+                    autoplayHoverPause: true
+                  });
+                  $('.play').on('click', function () {
+                    owl.trigger('play.owl.autoplay', [1000])
+                  })
+                  $('.stop').on('click', function () {
+                    owl.trigger('stop.owl.autoplay')
+                  })
+                })
+    </script>
 </body>
+<script src="highlight.js"></script>
+<script src="app.js"></script>
 </html>
